@@ -69,12 +69,24 @@ nav ul li:hover::after {
     width: 100%;
 }
 
+.nav-dropdown{
+    display: none;
+}
+
+@media (max-width: 480px) {
+    .nav-normal ul li{
+        display: none;
+    }
+    .nav-dropdown{
+        display: block;
+    }
+}
+
 /* Container1 */
 
 .container1 {
     width: 100%;
     height: 105vh;
-    margin-bottom: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -88,7 +100,6 @@ nav ul li:hover::after {
     height: 100%;
     width: 100%;
     border-radius: 0 0 20px 20px;
-    box-shadow: -5px 10px 15px rgba(0, 10, 100, 0.25);
     z-index: 1; /* Pastikan gambar ada di bawah overlay */
 }
 
@@ -107,10 +118,10 @@ nav ul li:hover::after {
 /* Logo dan Card */
 
 .container2 {
-    font-family: Arial, sans-serif;
-    background-color: #f2f3f3;
-    margin: 10px 0;
-    padding: 0;
+    position: relative;
+    background-color: #16502D;
+    padding: 50px 0;
+    margin-top: 150px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -119,34 +130,60 @@ nav ul li:hover::after {
 }
 
 .container2 .logo {
+    position: absolute;
+    top :-15%;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
     background-color: #D6D9D5;
     padding: 20px;
-    border-radius: 10px;
-    width: 70%;
+    border-radius: 20px;
+    min-width: 70%;
     max-width: 1000px;
     margin: 0 25px 50px;
 }
 
 .logo-item {
+    flex: 1;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 10px;
 }
 
 .logo-item img {
-    width: 100px;
-    height: auto;
+    flex: 1;
+    height: 70px;
+    width: auto;
     display: block;
     margin: 0 auto;
-    scale: 2;
     
 }
 
 .logo-item p {
+    flex: 1;
     margin-top: 10px;
-    font-size: 14px;
+    font-size: large;
+    font-weight: bold;
     color: #000;
+}
+
+@media (max-width: 480px) {
+    .container2{
+        margin-top: 220px;
+        padding-top: 150px;
+    }
+
+    .logo-item img {
+        height: 50px;
+        
+    }
+
+    .logo-item p {
+        font-size: small;
+    }
 }
 
 .cards {
@@ -195,7 +232,7 @@ nav ul li:hover::after {
 }
 
 .card-content button {
-    background-color: #4CAF50;
+    background-color: #16502D;
     color: white;
     border: none;
     padding: 10px 15px;
@@ -205,6 +242,7 @@ nav ul li:hover::after {
     font-size: 14px;
     border-radius: 5px;
     cursor: pointer;
+    transition: all 0.2s;
 }
 
 .card-content button:hover {
@@ -225,7 +263,7 @@ nav ul li:hover::after {
 
 @media (max-width: 480px) {
     .card {
-        width: 100%;
+        width: 90%;
     }
 
     .card img {
@@ -319,4 +357,114 @@ nav ul li:hover::after {
     flex: 1;
     color: white;
     padding: 20px 65px 20px 20px ;
+}
+
+.container5 .content-container .img{
+    background-image: url(aset/img/conten\ 2.jpg);
+}
+
+@media (max-width: 480px) {
+    .content-container{
+        flex-direction: column;
+    }
+
+    .container3 .content-container .img, .container4 .content-container .img{
+        flex: none;
+        width: auto;
+        height: 200px;
+        margin-bottom: 20px;
+    }
+
+    .container3 .content-container p, .container4 .content-container p{
+        padding: 20px ;
+        text-align: center;
+    }
+
+    .container4 .content-container{
+        flex-direction: column-reverse;
+    }
+}
+
+
+.horizontal-scroll {
+    width: 100%;
+    overflow-x: scroll;
+    display: flex;
+    position: relative;
+    scrollbar-color: transparent transparent;
+}
+
+.horizontal-scroll::-webkit-scrollbar {
+    display: none;
+}
+
+.container6 {
+    display: flex;
+    gap: 2rem;
+}
+
+.item {
+    width: 350px;
+    height: 400px;
+    background-color: #e0e0e0;
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+
+.item p{
+    text-align: center;
+}
+
+.item .profil{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.item .profil img{
+    height: 75px;
+    width: auto;
+    border-radius: 50%;
+}
+
+.title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+h1{
+    text-align: center;
+    align-items: center;
+    margin: 150px 0 100px;
+    padding: 20px;
+    padding-right: 0;
+    border-radius: 20px;
+    background-color: #D6D9D5;
+}
+
+.green{
+    background-color: #16502D;
+    color: white;
+}
+
+.petani{
+    padding: 20px;
+    border-radius: 20px;
+}
+
+@media (max-width: 480px) {
+    h1 {
+        margin: 100px 20px 50px;
+    }
+    h1 .green{
+        background-color: transparent;
+        color: #000;
+    }
 }
