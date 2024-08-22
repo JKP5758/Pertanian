@@ -25,7 +25,7 @@ ul li{
 
 nav{
     z-index: 99;
-    /* position: fixed; */
+    position: fixed;
     width: 100%;
     min-height: 10vh;
     background-color: rgba(240, 240, 240, 0.8);
@@ -71,65 +71,252 @@ nav ul li:hover::after {
 
 /* Container1 */
 
-.container1{
-
-}
-
-.container1 img{
- width: 100%;
- height: 90vh;
-}
-
-.container2{
+.container1 {
+    width: 100%;
+    height: 105vh;
+    margin-bottom: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
+    position: relative; /* Penting untuk overlay */
+}
+
+.container1 img {
+    position: absolute;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    border-radius: 0 0 20px 20px;
+    box-shadow: -5px 10px 15px rgba(0, 10, 100, 0.25);
+    z-index: 1; /* Pastikan gambar ada di bawah overlay */
+}
+
+.container1::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0) 70%);
+    border-radius: 0 0 20px 20px;
+    z-index: 2; /* Overlay di atas gambar */
+}
+
+/* Logo dan Card */
+
+.container2 {
+    font-family: Arial, sans-serif;
+    background-color: #f2f3f3;
+    margin: 10px 0;
+    padding: 0;
+    display: flex;
     flex-direction: column;
-    padding: 10%;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container2 .logo {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #D6D9D5;
+    padding: 20px;
+    border-radius: 10px;
+    width: 70%;
+    max-width: 1000px;
+    margin: 0 25px 50px;
+}
+
+.logo-item {
+    text-align: center;
+}
+
+.logo-item img {
+    width: 100px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    scale: 2;
     
 }
 
-.container2 .title{
-    background-color: yellow;
-    width: 80vw;
-    padding: 50px;
+.logo-item p {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #000;
 }
 
-.container2 ul{
+.cards {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: row;
-    ;
-}
-
-.container2 ul li{
-    display: flex;
+    gap: 20px;
     justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    padding: 20px
+    align-items: stretch;
+    flex-wrap: wrap;
 }
 
-.container2 ul li .deskripsi{
+.card {
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     display: flex;
-    justify-content: center;
-    align-items: start;
     flex-direction: column;
+    margin: 10px;
 }
 
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
 
-.container2 .card ul{
-    width: 80vw;
+.card-content {
+    padding: 15px;
     display: flex;
-    justify-content: space-around;
-    border: 1px solid blue;
-
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
 }
 
-.container2 .card ul li{
-    background-color: gray;
-    margin: 5px;
+.card-content h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.card-content p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.card-content button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.card-content button:hover {
+    background-color: #45a049;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        width: 100%;
+    }
+
+    .card img {
+        height: 150px;
+    }
+
+    .card-content h3 {
+        font-size: 16px;
+    }
+
+    .card-content p {
+        font-size: 12px;
+    }
+
+    .card-content button {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+}
 
 
+/* Container 3 */
+
+.container3 {
+    margin-top: 50px;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container3 .content-container {
+    padding: 20px;
+    display: flex;
+    max-width: 1000px;
+    background-color: #e0e0e0;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Ensure content-container takes full width */
+}
+
+.container3 .content-container .img{
+    border-radius: 20px;
+    background-image: url(aset/img/conten\ 1.png);
+    background-size: cover;
+    background-position: center;
+    flex: 0.75;
+    width: 250px;
+    height: auto;
+    scale: 1.2;
+}
+
+.container3 .content-container p{
+    flex: 1;
+    padding: 20px 20px 20px 65px;
+}
+
+/* Container 4 */
+.container4{
+    margin-top: 50px;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container4 .content-container {
+    padding: 20px;
+    display: flex;
+    max-width: 1000px;
+    background-color: #16502D;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Ensure content-container takes full width */
+}
+
+.container4 .content-container .img{
+    border-radius: 20px;
+    background-image: url(aset/img/conten\ 3.jpg);
+    background-size: cover;
+    background-position: center;
+    flex: 0.75;
+    width: 250px;
+    height: auto;
+    scale: 1.2;
+}
+
+.container4 .content-container p{
+    flex: 1;
+    color: white;
+    padding: 20px 65px 20px 20px ;
 }
