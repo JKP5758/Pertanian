@@ -120,18 +120,17 @@ nav ul li:hover::after {
 .container2 {
     position: relative;
     background-color: #16502D;
-    padding: 50px 0;
-    margin-top: 150px;
+    padding: 10rem 0;
+    margin-top: 12rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
 }
 
 .container2 .logo {
     position: absolute;
-    top :-15%;
+    top :-7rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -174,6 +173,11 @@ nav ul li:hover::after {
     .container2{
         margin-top: 220px;
         padding-top: 150px;
+        max-height: none;
+    }
+
+    .container2 .logo{
+        top :-10rem;
     }
 
     .logo-item img {
