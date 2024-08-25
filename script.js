@@ -1,41 +1,25 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const scrollContainer = document.querySelector('.horizontal-scroll');
+document.addEventListener('DOMContentLoaded', function() {
     const container = document.querySelector('.container6');
-    const items = document.querySelectorAll('.item');
-    
-    // Clone items to create infinite scrolling effect
-    items.forEach(item => {
-        const clone = item.cloneNode(true);
-        container.appendChild(clone);
-    });
+    const clone = container.innerHTML; 
+    container.innerHTML += clone; // Duplikasikan konten
+});
 
-    let scrollAmount = 0;
-    let isHovering = false;
-    let hoverTimeout;
 
-    function scrollLoop() {
-        if (!isHovering) {
-            scrollAmount += 1;
-            if (scrollAmount >= container.scrollWidth / 2) {
-                scrollAmount = 0;
+document.addEventListener('DOMContentLoaded', function() {
+    // Pilih semua link yang mengarah ke elemen dengan id
+    document.querySelectorAll('a[href^="#content"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault(); // Mencegah aksi default dari anchor
+            
+            const targetId = this.getAttribute('href'); // Mendapatkan id target
+            const targetElement = document.querySelector(targetId); // Mendapatkan elemen target
+            
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop - 100, // Scroll ke elemen target dengan offset 100px ke atas
+                    behavior: 'smooth' // Memastikan scroll tetap smooth
+                });
             }
-            scrollContainer.scrollLeft = scrollAmount;
-        }
-        requestAnimationFrame(scrollLoop);
-    }
-
-    items.forEach(item => {
-        item.addEventListener('mouseenter', () => {
-            isHovering = true;
-            if (hoverTimeout) clearTimeout(hoverTimeout);  // Clear any existing timeout
-        });
-
-        item.addEventListener('mouseleave', () => {
-            hoverTimeout = setTimeout(() => {
-                isHovering = false;
-            }, 150);  // 0.5s delay before resuming the scroll
         });
     });
-
-    scrollLoop();
 });

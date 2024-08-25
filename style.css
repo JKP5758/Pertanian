@@ -3,6 +3,10 @@
     src: url(aset/font/Poppins-Regular.ttf);
 }
 
+html {
+    scroll-behavior: smooth;
+  }
+
 *{
     padding: 0;
     margin: 0;
@@ -235,6 +239,10 @@ nav ul li:hover::after {
     margin-bottom: 15px;
 }
 
+.card-content a{
+    width: 100%;
+}
+
 .card-content button {
     background-color: #16502D;
     color: white;
@@ -244,9 +252,10 @@ nav ul li:hover::after {
     text-decoration: none;
     display: inline-block;
     font-size: 14px;
-    border-radius: 5px;
+    border-radius: 10px;
     cursor: pointer;
     transition: all 0.2s;
+    width: 100%;
 }
 
 .card-content button:hover {
@@ -390,25 +399,31 @@ nav ul li:hover::after {
 }
 
 
-.horizontal-scroll {
-    width: 100%;
-    overflow-x: scroll;
-    display: flex;
-    position: relative;
-    scrollbar-color: transparent transparent;
+/* Card Scroll */
+
+@keyframes scrollLeft {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
 }
 
-.horizontal-scroll::-webkit-scrollbar {
-    display: none;
+.horizontal-scroll {
+    width: 100%;
+    overflow: hidden; /* Sembunyikan scrollbar */
+    position: relative;
 }
 
 .container6 {
     display: flex;
     gap: 2rem;
+    animation: scrollLeft 30s linear infinite; /* Scroll smooth dan looping */
 }
 
 .item {
-    width: 350px;
+    width: 350px; /* Pastikan lebar item tetap sesuai */
     height: 400px;
     background-color: #e0e0e0;
     border-radius: 20px;
@@ -417,33 +432,33 @@ nav ul li:hover::after {
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
+    flex-shrink: 0; /* Mencegah card menyusut */
 }
 
-.item p{
+.item p {
     text-align: center;
 }
 
-.item .profil{
+.item .profil {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
 
-.item .profil img{
+.item .profil img {
     height: 75px;
     width: auto;
     border-radius: 50%;
 }
 
-.title{
+.title {
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
-h1{
+h1 {
     text-align: center;
     align-items: center;
     margin: 150px 0 100px;
@@ -453,15 +468,19 @@ h1{
     background-color: #D6D9D5;
 }
 
-.green{
+.green {
     background-color: #16502D;
     color: white;
 }
 
-.petani{
+.petani {
     padding: 20px;
     border-radius: 20px;
 }
+
+
+
+
 
 @media (max-width: 480px) {
     h1 {
@@ -487,7 +506,7 @@ h1{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 40px;
+    gap: 60px;
 }
 
 .team-member {
