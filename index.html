@@ -6,22 +6,27 @@
     <meta name="description" content="Situs Tani Berkah adalah proyek dari kelompok MyDev yang menyediakan informasi dan panduan terbaru tentang teknik bercocok tanam, inovasi pertanian, dan produk-produk unggulan untuk petani modern.">
     <title>MyDev Tani Berkah</title>
     <link rel="stylesheet" href="style.css">
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="icon" type="image/x-icon" href="aset/img/logo.webp">
     <script src="script.js"></script>
 </head>
 <body>
 
     <!-- Navbar -->
-    <nav>
-        <div class="logo">
+    <nav class="animate__animated animate__fadeInDown animate__delay-1s">
+        <div class="logo animate__animate animate__fadeInDown">
             <a href="index.html"><img src="aset/img/logo.webp" alt="logo"></a>
         </div>
         <div class="nav-normal">
             <ul>
-                <li>Home</li>
-                <li>unit kerja</li>
-                <li>informasi</li>
-                <li>Kontak</li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#unit_kerja">Team</a></li>
+                <li><a href="#informasi">information</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </div>
         
@@ -33,28 +38,28 @@
         </div>
     </nav>
 
-    <div class="container1">
-        <img src="aset/img/bg 1.jpg" alt="">
+    <div id="home" class="container1 animate__animated animate__fadeIn animate__faster">
+        <video src="aset/video/video.webm" autoplay muted loop>
     </div>
 
     <div class="container2">
-        <div class="logo">
-            <div class="logo-item">
+        <div class="logo" data-aos="fade-up" data-aos-duration="1000">
+            <div class="logo-item" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="500">
                 <img src="aset/img/BUMN.png" alt="Logo 1">
                 <p>Badan Usaha Milik Negara</p>
             </div>
-            <div class="logo-item">
+            <div class="logo-item" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="750">
                 <img src="aset/img/Pertanian.webp" alt="Logo 2">
                 <p>Kementerian Pertanian Republik Indonesia</p>
             </div>
-            <div class="logo-item">
+            <div class="logo-item" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1000">
                 <img src="aset/img/BPN.png" alt="Logo 3">
                 <p>Badan Pangan Nasional</p>
             </div>
         </div>
 
-        <div class="cards">
-            <div class="card">
+        <div class="cards" >
+            <div class="card" data-aos="fade-right" data-aos-duration="1250" data-aos-delay="500">
                 <img src="aset/img/conten 1.png" alt="Card 1">
                 <div class="card-content">
                     <h3>Pertanian Memasuki Langkah Nyata Menuju Lumbung Pangan Dunia</h3>
@@ -62,7 +67,7 @@
                     <a href="#content1"><button>Selengkapnya</button></a>
                 </div>
             </div>
-            <div class="card">
+            <div class="card" data-aos="fade-right" data-aos-duration="1250" data-aos-delay="750">
                 <img src="aset/img/conten 3.jpg" alt="Card 2">
                 <div class="card-content">
                     <h3>Upaya Hadapi Serangan Hama Wereng Dilahan Pertanian Terik</h3>
@@ -70,7 +75,7 @@
                     <a href="#content2"><button>Selengkapnya</button></a>
                 </div>
             </div>
-            <div class="card">
+            <div class="card" data-aos="fade-right" data-aos-duration="1250" data-aos-delay="1000">
                 <img src="aset/img/conten 2.jpg" alt="Card 3">
                 <div class="card-content">
                     <h3>Anggaran Ketahanan Pangan 2025: Harus Tingkatkan Produktivitas Pertanian</h3>
@@ -83,7 +88,7 @@
 
     <div class="container3">
         <div id="content1" class="content-container">
-            <div class="img"></div>
+            <div class="img" data-aos="zoom-in" data-aos-duration="1500"></div>
             <p>
                 Menteri Pertanian Andi Amran Sulaiman, pada kunjungan di Merauke, Papua Selatan, menegaskan tekad pemerintah untuk menjadikan Merauke sebagai lumbung pangan global. Dia menyatakan optimisme bahwa Merauke akan menjadi sumber utama beras nasional dalam dua tahun ke depan. Evaluasi dilakukan terhadap progres optimalisasi lahan rawa seluas 40 ribu hektar, dengan lebih dari separuh sudah selesai dibangun. Pembangunan jalan sepanjang 135,5 km juga tengah berlangsung untuk mendukung program cetak sawah 1 juta hektar. Menteri Amran memantau proyek ini secara langsung dan berkomitmen untuk terus mengawasinya. Semangat membangun Merauke sebagai lumbung pangan dunia menjadi fokus dalam upaya modernisasi pertanian di daerah tersebut.
             </p>
@@ -95,13 +100,13 @@
             <p>
                 Serangan hama wereng terhadap tanaman padi di Tasikmalaya telah menimbulkan kekhawatiran, terutama bagi para petani. Koordinator penyuluh pertanian BPP Kecamatan Cibeureum, Asep Ridwan, menyampaikan bahwa serangan hama wereng jenis batang coklat (WBC) kini sedang merebak dan mengejutkan petani. Hal ini diduga disebabkan oleh perubahan iklim, penggunaan benih kurang berkualitas, dan gangguan ekosistem yang mengurangi populasi predator wereng. Untuk mengatasi masalah ini, saat ini dilakukan penyemprotan insektisida baik oleh pemerintah maupun petani sendiri. Para penyuluh pertanian juga memberikan bantuan insektisida kepada petani untuk membantu mengatasi serangan hama wereng ini. Meskipun jumlah lahan yang terdampak mencapai 80 hektar, petugas terus melakukan upaya pengendalian dan memberikan penyuluhan untuk mencegah serangan hama tersebut terjadi di musim panen selanjutnya.
             </p>
-            <div class="img"></div>
+            <div class="img" data-aos="zoom-in" data-aos-duration="1500"></div>
         </div>
     </div>
 
     <div class="container3 container5">
         <div id="content3" class="content-container">
-            <div class="img"></div>
+            <div class="img" data-aos="zoom-in" data-aos-duration="1500"></div>
             <p>
                 Pengamat pertanian dan Kepala Dinas Pangan Sumatera Barat, Syaiful Bahri, menyoroti pentingnya memaksimalkan anggaran ketahanan pangan Rp 124,4 triliun dalam RAPBN 2025 untuk meningkatkan produktivitas pertanian. Dikatakan bahwa prioritas utama harus diberikan pada ketahanan pangan, baik melalui impor maupun produksi dalam negeri. Syaiful menekankan perlunya pemerintah fokus pada peningkatan produktivitas pertanian, terutama dalam produksi padi, untuk menghindari defisit beras. Keseriusan pemerintah dalam mencapai ketahanan pangan dinilai dari penanganan berbagai permasalahan pertanian, seperti pupuk subsidi, kualitas bibit, dan infrastruktur pertanian.
             </p>
@@ -109,96 +114,96 @@
     </div>
 
     <div class="title">
-        <h1>Apa saja masukan <span class="petani green">PETANI BERKAH?</span></h1>
+        <h1 data-aos="fade-right" data-aos-duration="1500" data-aos-delay="250">Apa saja masukan <span class="petani green">PETANI BERKAH?</span></h1>
     </div>
 
     <div class="horizontal-scroll">
         <div class="container6">
-            <div class="item">
+            <div class="item" data-aos="zoom-in-left" data-aos-duration="2000">
                 <p>Pertimbangkan untuk diversifikasi produk yang ditanam untuk membuka peluang pasar baru. Manfaatkan platform digital dan media sosial untuk mempromosikan dan menjual produk secara langsung kepada konsumen.</p>
                 <div class="profil">
                     <img src="aset/img/user2.png" alt="profil">
                     <span>Ahmad Kasim</span>
                 </div>
             </div>
-            <div class="item green">
+            <div class="item green" data-aos="zoom-in-left" data-aos-duration="2000">
                 <p>cobalah teknik rotasi tanaman untuk menjaga kesehatan tanah dan mengurangi risiko penyakit tanaman. Gunakan kompos organik untuk meningkatkan  kesuburan tanah dan struktur tanah. </p>
                 <div class="profil">
                     <img src="aset/img/user6.png" alt="profil">
                     <span>Hadi Hidayat</span>
                 </div>
             </div>
-            <div class="item">
+            <div class="item" data-aos="zoom-in-left" data-aos-duration="2000">
                 <p>Pertimbangkan menggunakan teknologi seperti sensor tanah atau aplikasi mobile untuk memantau kesehatan tanaman dan kondisi tanah. Pastikan semua alat dan mesin pertanian dalam kondisi baik dan rutin diperiksa serta dirawat.</p>
                 <div class="profil">
                     <img src="aset/img/user5.png" alt="profil">
                     <span>Setya Ida</span>
                 </div>
             </div>
-            <div class="item green">
+            <div class="item green" data-aos="zoom-in-left" data-aos-duration="2000">
                 <p>Perhatikan kesehatan dan keselamatan kerja dengan menggunakan alat pelindung dan teknik kerja yang aman. Usahakan untuk menjaga keseimbangan antara pekerja dan kehidupan pribadi agar tetap sehat dan produktif.</p>
                 <div class="profil">
                     <img src="aset/img/user4.png" alt="profil">
                     <span>Kurnia Ningsih</span>
                 </div>
             </div>
-            <div class="item">
+            <div class="item" data-aos="zoom-in-left" data-aos-duration="2000">
                 <p>Ikuti pelatihan dan workshop tentang teknik pertanian terbaru, manajemen bisnis pertanian, dan pemasaran produk. Bergabunglah dengan kelompok petani dan asosiasi untuk berbagai pengalaman dan informasi.</p>
                 <div class="profil">
                     <img src="aset/img/user3.png" alt="profil">
                     <span>Budi utomo</span>
                 </div>
             </div>
-            <div class="item green">
+            <div class="item green" data-aos="zoom-in-left" data-aos-duration="2000">
                 <p>Lakukan pemantauan rutin terhadap tanaman untuk mendeteksi hama dan penyakit  sejak dini. Gunakan metode pengendalian hama yang ramah lingkungan, seperti predator alami dan pestisida organik.</p>
                 <div class="profil">
                     <img src="aset/img/user1.png" alt="profil">
-                    <span>Muhammad Sumbul</span>
+                    <span>Muhammad Sumbul</span>
                 </div>
             </div>
         </div>
     </div>
     
-    <div class="team-section">
-        <h2>All Team</h2>
+    <div  class="team-section">
+        <h2 id="unit_kerja">All Team</h2>
         <div class="team-container">
-            <div class="team-member">
-                <img src="aset/img/profil1.jpg" alt="Joko Purnomo">
+            <div class="team-member" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="">
+                <img src="aset/img/joko.png" alt="Joko Purnomo">
                 <div class="team-info">
                     <h3>Joko Purnomo</h3>
                     <p>jokopurnomo22012006@gmail.com</p>
                 </div>
             </div>
-            <div class="team-member">
-                <img src="aset/img/profil1.jpg" alt="Anggita Salsa Sapta A.">
+            <div class="team-member" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="250">
+                <img src="aset/img/anggita.jpg" alt="Anggita Salsa Sapta A.">
                 <div class="team-info">
                     <h3>Anggita Salsa Sapta A.</h3>
                     <p>anggitaanggita985@gmail.com</p>
                 </div>
             </div>
-            <div class="team-member">
-                <img src="aset/img/profil1.jpg" alt="Nafis Okta Ramadhan">
+            <div class="team-member" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
+                <img src="aset/img/nafis.jpg" alt="Nafis Okta Ramadhan">
                 <div class="team-info">
                     <h3>Nafis Okta Ramadhan</h3>
                     <p>octanafis22@gmail.com</p>
                 </div>
             </div>
-            <div class="team-member">
+            <div class="team-member" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="750">
                 <img src="aset/img/profil1.jpg" alt="Rasyid Dzikry Arwamdy">
                 <div class="team-info">
                     <h3>Rasyid Dzikry Arwamdy</h3>
                     <p>rasyid.arwandi123@gmail.com</p>
                 </div>
             </div>
-            <div class="team-member">
+            <div class="team-member" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1000">
                 <img src="aset/img/profil1.jpg" alt="Erlinda Nur Latifah.">
                 <div class="team-info">
                     <h3>Erlinda Nur Latifah.</h3>
                     <p>nurlatifaherlinda@gmail.com</p>
                 </div>
             </div>
-            <div class="team-member">
-                <img src="aset/img/profil1.jpg" alt="Lucky Achmad">
+            <div class="team-member" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1250">
+                <img src="aset/img/lucky.jpg" alt="Lucky Achmad">
                 <div class="team-info">
                     <h3>Lucky Achmad</h3>
                     <p>luckyachmad535@gmail.com</p>
@@ -208,7 +213,7 @@
     </div>
 
     <footer>
-        <div class="footer-container">
+        <div id="informasi" class="footer-container">
             <div class="footer-item">
                 <h3>MyDev-team</h3>
                 <p>Dari ladang ke Meja makan, semuanya berawal dari bumi.</p>
@@ -231,4 +236,10 @@
         </div>
     </footer>
 </body>
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
 </html>

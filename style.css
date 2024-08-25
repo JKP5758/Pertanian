@@ -7,6 +7,10 @@ html {
     scroll-behavior: smooth;
   }
 
+  a{
+    color: black;
+  }
+
 *{
     padding: 0;
     margin: 0;
@@ -27,7 +31,7 @@ ul li{
     list-style: none;
 }
 
-nav{
+body nav{
     z-index: 99;
     position: fixed;
     width: 100%;
@@ -38,6 +42,7 @@ nav{
     justify-content: space-between;
     align-items: center;
     padding: 5px 5vh 0;
+    --animate-delay: 0.5s;
 }
 
 nav .logo a img{
@@ -96,9 +101,10 @@ nav ul li:hover::after {
     align-items: center;
     flex-wrap: wrap;
     position: relative; /* Penting untuk overlay */
+    --animate-duration: 2s;
 }
 
-.container1 img {
+.container1 video {
     position: absolute;
     object-fit: cover;
     height: 100%;
@@ -418,16 +424,19 @@ nav ul li:hover::after {
 
 .container6 {
     display: flex;
-    gap: 2rem;
-    animation: scrollLeft 30s linear infinite; /* Scroll smooth dan looping */
+    gap: 0; /* Hilangkan gap di antara card */
+    width: calc(200%); /* Ubah sesuai dengan lebar konten yang digandakan */
+    animation: scrollLeft 60s linear infinite;
+    will-change: transform; /* Optimasi performa */
 }
 
 .item {
-    width: 350px; /* Pastikan lebar item tetap sesuai */
+    width: 350px;
     height: 400px;
     background-color: #e0e0e0;
     border-radius: 20px;
     padding: 20px;
+    margin-right: 2rem; /* Tambahkan margin langsung ke item jika ingin tetap ada spasi */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -478,9 +487,21 @@ h1 {
     border-radius: 20px;
 }
 
+@keyframes scrollLeft {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%); /* Sesuaikan dengan lebar container */
+    }
+}
 
+/* Hover effect untuk berhenti animasi */
+.horizontal-scroll:hover .container6 {
+    animation-play-state: paused;
+}
 
-
+/* Team */
 
 @media (max-width: 480px) {
     h1 {
@@ -495,6 +516,7 @@ h1 {
 .team-section {
     text-align: center;
     padding: 50px 0;
+    margin-top: 100px;
 }
 
 .team-section h2 {
@@ -533,8 +555,12 @@ h1 {
     font-size: 0.9rem;
 }
 
+
+/* Footer */
+
 footer {
     background-color: #c3d2c4;
+    margin-top: 50px
 }
 
 .footer-container {
@@ -590,3 +616,107 @@ footer {
     font-size: 0.9rem;
     color: #ddd;
 }
+
+
+/* Contact */
+
+ .contact{
+    background-color: aqua;
+    display: flex;
+    position: relative;
+    min-height: 100vh;
+    padding: 20vh 15vw;;
+ }
+
+ .contact_item{
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+    flex-direction: row;    
+    background-color: #45a049;
+    width: 100%;
+    padding: 10px;
+    border-radius: 20px;
+    --animate-duration: 1s;
+    --animate-delay:1.25s;
+ }
+
+ .items{
+    flex: 1;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 2.5rem;
+    height: 100%;
+    width: 100%;
+    
+ }
+
+ .detail_item{
+    display: flex;
+    align-items: center;
+    position: relative;
+    flex-direction: row;
+    border: red 1px solid;
+    height: 100%;
+    padding: 5px;
+ }
+
+ .detail_item p{
+    display:flex ;
+    flex-wrap: wrap;
+ }
+
+ .text1{
+    --animate-delay: 3s;
+ }
+ .text2{
+    --animate-delay: 3.25s;
+ }
+ .text3{
+    --animate-delay: 3.50s;
+ }
+
+ .icon{
+    position: absolute;
+    width: 5rem;
+    height: auto;
+    background-color: #4645a0;
+    border-radius: 50%;
+    left: -5.5rem;
+    animation-duration: 1s;
+ }
+
+ .icon1{
+    --animate-delay: 2.25s;
+ }
+ .icon2{
+    --animate-delay: 2.50s;
+ }
+ .icon3{
+    --animate-delay: 2.75s;
+ }
+
+ .map{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+ }
+
+ .map iframe{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    --animate-delay: 4.50s;
+    --animate-duration: 1.50s;
+
+ }
+
+ @media (max-width: 480px) {
+    .contact .contact_item{
+        flex-direction: column;
+    }
+ }

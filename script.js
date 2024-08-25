@@ -1,13 +1,15 @@
 document.addEventListener('DOMContentLoaded', function() {
     const container = document.querySelector('.container6');
-    const clone = container.innerHTML; 
-    container.innerHTML += clone; // Duplikasikan konten
+    const items = container.innerHTML; // Simpan konten asli
+    container.innerHTML += items; // Duplikasikan konten
 });
 
 
+
+
 document.addEventListener('DOMContentLoaded', function() {
-    // Pilih semua link yang mengarah ke elemen dengan id
-    document.querySelectorAll('a[href^="#content"]').forEach(anchor => {
+    // Pilih semua link yang mengarah ke elemen dengan id yang diawali dengan "#content" atau "#unit"
+    document.querySelectorAll('a[href^="#content"], a[href^="#unit"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             e.preventDefault(); // Mencegah aksi default dari anchor
             
@@ -23,3 +25,4 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
