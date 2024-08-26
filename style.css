@@ -620,20 +620,36 @@ footer {
 
 /* Contact */
 
- .contact{
-    background-color: aqua;
+.contact {
+    background-image: url('aset/img/contac_bg.jpg'); /* Pastikan jalur benar */
+    background-position: center;
+    background-size: cover;
     display: flex;
     position: relative;
     min-height: 100vh;
-    padding: 20vh 15vw;;
- }
+    padding: 20vh 15vw;
+    z-index: 1; /* Konten berada di atas layer blur */
+    color: white; /* Pastikan teks dapat terlihat */
+}
+
+.contact::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Warna hitam semi-transparan */
+    backdrop-filter: blur(8px); /* Efek blur */
+    z-index: -1; /* Letakkan di belakang konten */
+}
 
  .contact_item{
     display: flex;
     position: relative;
     flex-wrap: wrap;
     flex-direction: row;    
-    background-color: #45a049;
+    background-color: rgba(22, 80, 45, 0.85);
     width: 100%;
     padding: 10px;
     border-radius: 20px;
@@ -658,7 +674,6 @@ footer {
     align-items: center;
     position: relative;
     flex-direction: row;
-    border: red 1px solid;
     height: 100%;
     padding: 5px;
  }
@@ -666,6 +681,10 @@ footer {
  .detail_item p{
     display:flex ;
     flex-wrap: wrap;
+    text-align: left;
+    padding: 10px;
+    font-size: 1rem;
+    color: white;
  }
 
  .text1{
@@ -679,23 +698,60 @@ footer {
  }
 
  .icon{
+    padding: 1rem;
+    display: flex;
     position: absolute;
     width: 5rem;
     height: auto;
-    background-color: #4645a0;
+    background-color: white;
     border-radius: 50%;
     left: -5.5rem;
     animation-duration: 1s;
+ }
+ .icon img{
+    flex: 1;
+    width: 100%;
+    height: auto;
+    
  }
 
  .icon1{
     --animate-delay: 2.25s;
  }
+ .location:hover .icon1 img{
+    background-image: url(aset/img/location_color.png);
+    background-size: cover;
+    background-position: center;
+    z-index: -1; /* Tetap di belakang konten */
+ }
+ .location:hover .icon1{
+    background-color: #16502D;
+ }
+
  .icon2{
     --animate-delay: 2.50s;
  }
+ .mail:hover .icon2 img{
+    background-image: url(aset/img/mail_color.png);
+    background-size: cover;
+    background-position: center;
+    z-index: -1; /* Tetap di belakang konten */
+ }
+ .mail:hover .icon2{
+    background-color: #16502D;
+ }
+
  .icon3{
     --animate-delay: 2.75s;
+ }
+ .phone:hover .icon3 img{
+    background-image: url(aset/img/phone_color.png);
+    background-size: cover;
+    background-position: center;
+    z-index: -1; /* Tetap di belakang konten */
+ }
+ .phone:hover .icon{
+    background-color: #16502D;
  }
 
  .map{
