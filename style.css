@@ -707,7 +707,7 @@ a.sosmed{
 
 .ig.sosmed .img_color, .fb.sosmed .img_color, .twitter.sosmed .img_color, .yt.sosmed .img_color{
     opacity: 0;
-    transition: all 0.5s;
+    transition: all 0.25s;
 }
 
 .ig.sosmed:hover .img_color{
