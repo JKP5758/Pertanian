@@ -1,0 +1,275 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+header {
+    background-color: #16502D;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 1rem 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+header nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+header nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: opacity 0.3s ease;
+}
+
+header nav a:hover {
+    opacity: 0.8;
+}
+
+.profil-container {
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 2rem;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profil-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.profil-header h1 {
+    color: #16502D;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    margin: 0;
+}
+
+.profil-header p {
+    color: #666;
+    font-size: 1.2rem;
+}
+
+.profil-details {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.details, .about-me {
+    width: 45%;
+}
+
+.details h2, .about-me h2 {
+    color: #16502D;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.details p, .about-me p {
+    margin: 0.5rem 0;
+}
+
+.social-media {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.social-media img {
+    width: 24px;
+    height: 24px;
+}
+
+.profil-foto-container {
+    position: relative;
+    width: 45%;
+    text-align: center;
+}
+
+.profil-foto {
+    width: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.profil-foto-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 99%;
+    background-color: rgba(22, 80, 45, 0.9);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 8px;
+}
+
+.profil-foto-container:hover .profil-foto-overlay {
+    opacity: 1;
+}
+
+.profil-foto-overlay h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.profil-foto-overlay p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+    .profil-container {
+        margin: 2rem 1rem;
+        padding: 1.5rem;
+    }
+
+    .profil-details {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .details, .about-me, .profil-foto-container {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+}
+
+/* Footer */
+
+footer {
+    background-color: #c3d2c4;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 30px;
+}
+
+@media (max-width: 480px) {
+    .footer-container{
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+}
+
+.footer-item{
+    flex: 1;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 20px;
+}
+
+.footer-item h3 {
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+}
+
+.footer-item a{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.footer-item p.moto{
+    background-color: #D6D9D5;
+    border-radius: 10px;
+    margin: 5px 0;
+    font-size: 1rem;
+    padding: 10px;
+}
+
+.footer-item img {
+    width: 150px;
+    margin-bottom: 10px;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    border-top: 1px solid #ddd;
+    background-color: #16502D;
+    padding: 10px 0;
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #ddd;
+}
+
+
+a.sosmed{
+    width: 70%;
+    margin-bottom: 10px;
+    color: #000;
+}
+.sosmed{
+    background-color: #D6D9D5;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+}
+
+.sosmed img{
+    width: 28px;
+    height: auto;
+    margin: 0;
+    position: absolute;
+    left: 10px;
+}
+
+.sosmed p{
+    margin: 5px 0;
+    font-size: 1rem;
+}
+
+.ig.sosmed .img_color, .fb.sosmed .img_color, .twitter.sosmed .img_color, .yt.sosmed .img_color{
+    opacity: 0;
+    transition: all 0.25s;
+}
+
+.ig.sosmed:hover .img_color{
+    opacity: 100;
+}
+.fb.sosmed:hover .img_color{
+    opacity: 100;
+}
+.twitter.sosmed:hover .img_color{
+    opacity: 100;
+}
+.yt.sosmed:hover .img_color{
+    opacity: 100;
+}
