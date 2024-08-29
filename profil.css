@@ -57,11 +57,14 @@ header nav a:hover {
     font-size: 2.5rem;
     margin-bottom: 0.5rem;
     margin: 0;
+    --animate-duration: 3s;
 }
 
 .profil-header p {
     color: #666;
     font-size: 1.2rem;
+    --animate-duration: 3s;
+    --animate-delay: 0.5s;
 }
 
 .profil-details {
@@ -78,10 +81,64 @@ header nav a:hover {
     color: #16502D;
     font-size: 1.5rem;
     margin-bottom: 1rem;
+    --animate-duration: 1.25s;
+    --animate-delay: 2s;
 }
 
 .details p, .about-me p {
     margin: 0.5rem 0;
+    --animate-duration: 1.5s;
+}
+
+.animate1 {
+    --animate-delay: 1.25s;
+}
+
+.animate2 {
+    --animate-delay: 1.5s;
+}
+
+.animate3 {
+    --animate-delay: 1.75s;
+}
+
+.animate4 {
+    --animate-delay: 2s;
+}
+
+.animate5 {
+    --animate-delay: 2.4s;
+    --animate-duration: 0.5s;
+}
+
+.animate6 {
+    --animate-delay: 2.5s;
+    --animate-duration: 0.5s;
+}
+
+.animate7 {
+    --animate-delay: 2.6s;
+    --animate-duration: 0.5s;
+}
+
+.animate8 {
+    --animate-delay: 2.7s;
+    --animate-duration: 0.5s;
+}
+
+.animate9 {
+    --animate-delay: 2.8s;
+    --animate-duration: 0.5s;
+}
+
+.animate10 {
+    --animate-delay: 2.9s;
+    --animate-duration: 0.5s;
+}
+
+.animate11 {
+    --animate-delay: 3s;
+    --animate-duration: 0.5s;
 }
 
 .social-media {
