@@ -210,7 +210,7 @@ nav ul li:hover::after {
 }
 
 .logo-item img {
-    flex: 1;
+    
     height: 70px;
     width: auto;
     display: block;
